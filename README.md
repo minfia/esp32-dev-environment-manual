@@ -17,17 +17,23 @@ Eclipseを使ったESP32の開発環境構築および、デバッグまでの�
 
 ## 1 環境構築
 ### 1.1 Eclipse
-|                           名称                           |  バージョン   |
-| :------------------------------------------------------- | :------------ |
-| [Eclipse(Full Edition C/C++)](https://mergedoc.osdn.jp/) | 20211219(x64) |
-| [Python](https://www.python.org/downloads/)              | 3.10.1        |
-| [ESP-IDF](https://github.com/espressif/esp-idf)          | 4.3.2         |
+|                                                            名称                                                            |  バージョン  |                                                                     備考                                                                     |
+| :------------------------------------------------------------------------------------------------------------------------- | :----------- | :------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Eclipse IDE for C/C++ Developers](https://www.eclipse.org/downloads/packages/release/2021-09/r/eclipse-ide-cc-developers) | 2021-09(x64) | [ESP-IDFが最新のEclipseに対応していない模様](https://github.com/espressif/idf-eclipse-plugin/blob/master/README.md#installing-prerequisites) |
+| [Java](https://www.oracle.com/java/technologies/downloads/)                                                                | Java 15      | 各自必要なバージョンを選ぶこと                                                                                                               |
+| [Pleiades](https://mergedoc.osdn.jp/index.html#pleiades.html)                                                              | -            | Eclipse日本語化プラグイン                                                                                                                    |
+| [Python](https://www.python.org/downloads/)                                                                                | 3.10.1       |                                                                                                                                              |
+| [ESP-IDF](https://github.com/espressif/esp-idf)                                                                            | 4.4          |                                                                                                                                              |
 
+1. Javaをインストールする。
 1. EclipseとPythonをダウンロードする。
 1. Pythonをインストールする。
    `Add Python  3.10 to PATH`にチェックを入れる。
 1. ESP32ディレクトリを移動しない場所に作成する。("C:\\"や"D:\\"など)
 1. Eclipseを解凍して、eclipseディレクトリをESP32ディレクトに移動する。
+1. Pleiadesを解凍して、Pleiadesの`setup.exe`を実行する。
+1. `選択`から`eclipse.exe`を選択する。
+1. `日本語化する`をクリックする。
 1. Eclipseを起動する。
 1. "ヘルプ" -> "新規ソフトウェアのインストール..."をクリックする。
    ![alt](image/esp-idf_install1.png)
