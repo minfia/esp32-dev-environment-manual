@@ -163,7 +163,7 @@ Espressif-IDE(Eclipse)を使ったESP32の開発環境構築および、デバ�
    ![alt](../image/environment/30-build-new-project.png)\
    "Select Project Target"は"esp32"を選択\
    "Create a project using one of the template"にチェックを入れ、"hello_world"を選択\
-   新規で作る場合は、チェックを入れず、"完了"をクリックする。  
+   新規で作る場合は、チェックを入れず、"Finish"をクリックする。  
 1. プロジェクトが作成されると"Project Explorer"に追加される\
    ![alt](../image/environment/31-build-create-project-done.png)
 
