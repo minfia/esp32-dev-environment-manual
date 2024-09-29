@@ -135,8 +135,8 @@ Espressif-IDE(Eclipse)を使ったESP32の開発環境構築および、デバ�
 | IO14  | ADBUS3  |   ADBUS3    |   TMS    |
 | IO15  | ADBUS2  |   ADBUS2    |   TDO    |
 |  EN   | ACBUS0  |   ACBUS0    |   RST    |
-| IO23  |  -[^2]  |   BDBUS1    | UART(TX) |
-| IO22  |  -[^2]  |   BDBUS0    | UART(RX) |
+|  RX   |  -[^2]  |   BDBUS1    | UART(TX) |
+|  TX   |  -[^2]  |   BDBUS0    | UART(RX) |
 |  GND  |   GND   |     GND     |          |
 
 [^1]: AE-2232を使用する場合、VCCIOA/VCCIOBのジャンパを外し、別途3.3V電源を用意して供給する必要がある
