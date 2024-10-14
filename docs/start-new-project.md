@@ -20,6 +20,7 @@ ProjectName: 任意の名前を入力する。\
 ![alt](../image/start/4-project-prompt.png)
 1. 以下のコマンドを実行し、"sdkconfig"を作成する\
 `idf.py menuconfig`\
+他にはプロジェクトをビルドすることで作成もできる\
 各設定項目については[ESP-IDF Configuration](../docs/sdkconfig-top.md)を参照
 ![alt](../image/start/5-project-run-menuconfig.png)
 1. 以下のようになるので設定を行う\
