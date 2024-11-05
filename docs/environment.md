@@ -1,5 +1,6 @@
 # ESP32の開発環境構築
-Espressif-IDE(Eclipse)を使ったESP32の開発環境構築および、デバッグまでの手順を記載する。
+Espressif-IDE(Eclipse)を使ったESP32の開発環境構築および、デバッグまでの手順を記載する。\
+時期によって旧バージョンとなることがあるので、適宜読み替えること。
 
 - [ESP32の開発環境構築](#esp32の開発環境構築)
   - [1 IDEの環境構築](#1-ideの環境構築)
@@ -16,7 +17,7 @@ Espressif-IDE(Eclipse)を使ったESP32の開発環境構築および、デバ�
 ## 1 IDEの環境構築
 |                         名称                          |      バージョン       |              備考               |
 | :---------------------------------------------------- | :-------------------- | :------------------------------ |
-| [Espressif-IDE](https://dl.espressif.com/dl/esp-idf/) | v3.0.0(20240605-1941) | Eclipse + ESP-IDFの環境         |
+| [Espressif-IDE](https://dl.espressif.com/dl/esp-idf/) | v3.1.0(20241007-0706) | Eclipse + ESP-IDFの環境         |
 | [Pleiades](https://willbrains.jp/#pleiades.html)      | -                     | Eclipse日本語化プラグイン(任意) |
 
 1. Espressif-IDEのインストーラーをダウンロードする\
@@ -175,12 +176,28 @@ Espressif-IDE(Eclipse)を使ったESP32の開発環境構築および、デバ�
 
 ## 5 プログラムのデバッグ
 1. デバッガとESP32を接続する
-1. 以下のように、緑枠で囲われている箇所を"Debug"、青枠で囲われている箇所を"hello_world Configuration"にする\
+1. 以下のように、緑枠で囲われている箇所を"Debug"、青枠で囲われている箇所を"hello_world Debug"にする\
    ![alt](../image/environment/34-debug-select-project.png)
+
+   <details>
+   <summary>Espressif-IDE v3.0.0以前</summary>
+
+   以下のように、緑枠で囲われている箇所を"Debug"、青枠で囲われている箇所を"hello_world Configuration"にする\
+   ![alt](../image/environment/34-debug-select-project_v3_0_0.png)
+   </details>
+
 1. "hello_world Configuration"の横にある歯車をクリックする
-1. "Edit Configuration"ウィンドウが開くので、"Debugger"タブをクリックし、以下のように設定する
+1. "Edit Configuration"ウィンドウが開くので、"Debugger"タブをクリックし、以下のように設定する\
    ![alt](../image/environment/35-debug-debugger-config.png)\
+   "Config options"を`-s ${OPENOCD_SCRIPTS} -f interface/ftdi/esp32_devkitj_v1.cfg -f target/esp32.cfg`に変更する
+
+   <details>
+   <summary>Espressif-IDE v3.0.0以前</summary>
+
+   ![alt](../image/environment/35-debug-debugger-config_v3_0_0.png)\
    "Board"を"ESP32 chip (via ESP-PROG)"に変更する
+   </details>
+
 1. 変更したら"OK"を押下し閉じる
 1. 赤枠で囲った箇所をクリックし、デバッグを開始する\
    ![alt](../image/environment/36-debug-run-debug.png)
@@ -191,7 +208,7 @@ Espressif-IDE(Eclipse)を使ったESP32の開発環境構築および、デバ�
 1. 赤枠で囲った箇所をクリックすることで"Terminal"表示が可能となる\
    ![alt](../image/environment/39-debug-terminal-enable.png)
 1. クリックすると以下のように設定ウィンドウが出るので設定し"OK"をクリックする\
-   ![alt](../image/environment/40-debug-terminal-config.png)
+   ![alt](../image/environment/40-debug-terminal-config.png)\
    "Choose terminal"は"ESP-IDF Serial Monitor"\
    "Project name"は該当のプロジェクト(今回は"hello_world")\
    "Serial port"はUSB-UARTが接続されているCOMポート\
